@@ -183,7 +183,7 @@ int main(int argc, char **argv)
 	std::ofstream out(out_name, std::ios_base::out);
 	uchar *MD5 = md5(&in);
 	for(int i = 0; i < 16; i++)
-		out<<std::hex<<std::uppercase<<uint(MD5[i])<<" ";
+		out<<std::hex<<std::uppercase<<uint(MD5[i]);
 	in.close();
 	out.close();
 	return 0;
