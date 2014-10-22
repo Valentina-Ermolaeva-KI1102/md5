@@ -50,6 +50,7 @@ uchar* md5(std::ifstream *in)
 	{
 		for(i = 0; i < size; i++)
 		{
+			in->get(buf);
 			if(in->eof())
 			{
 				if(i < 55)
@@ -71,7 +72,6 @@ uchar* md5(std::ifstream *in)
 					break;
 				}
 			}
-			in->get(buf);
 			msg_for_hash[i] = buf;
 		}
 		if(end)
